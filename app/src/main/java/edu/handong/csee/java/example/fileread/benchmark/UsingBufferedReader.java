@@ -9,11 +9,13 @@ public class UsingBufferedReader {
     public static void main(String[] args) throws IOException {
 
 
+       String name1 = args[0];
+       String name10 = args[1];
         //-------------- Test reading 1 MB file. --------------------
-
+       
         StopWatch.start();
 
-        BufferedReader inputStream= new BufferedReader(new FileReader(DumpDataWriter.input1MB));
+        BufferedReader inputStream= new BufferedReader(new FileReader(name1));
         while (inputStream.read()!=-1){}
 
         long duration = StopWatch.stop();
@@ -26,7 +28,7 @@ public class UsingBufferedReader {
 
         StopWatch.start();
 
-        BufferedReader inputStream2= new BufferedReader(new FileReader(DumpDataWriter.input10MB));
+        BufferedReader inputStream2= new BufferedReader(new FileReader(name10));
         while (inputStream2.read()!=-1){}
 
         long duration2 = StopWatch.stop();
